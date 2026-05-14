@@ -22,7 +22,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel pytest-cov
           python -m pip install .[dev]
       - name: Run coverage
-        run: pytest --cov-config=.coveragerc --cov=./ci_course --cov-report=xml
+        run: pytest --cov-config=.coveragerc --cov=./ci_course --cov-report=xml --cov-branch
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
